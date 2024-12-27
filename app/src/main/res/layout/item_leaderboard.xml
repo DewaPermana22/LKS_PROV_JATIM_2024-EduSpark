@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="nickname"
+            type="String" />
+        <variable
+            name="no"
+            type="String" />
+        <variable
+            name="totalPoint"
+            type="String" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingVertical="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/no_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@{no + `.`}"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:fontFamily="sans-serif-condensed"/>
+        <TextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/name_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@{nickname}"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:fontFamily="sans-serif-condensed"/>
+        <TextView
+            android:gravity="end"
+            android:layout_weight="1"
+            android:id="@+id/scoreLeaderboard_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@{totalPoint}"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:fontFamily="sans-serif-condensed"/>
+    </LinearLayout>
+</layout>
